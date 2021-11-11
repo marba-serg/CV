@@ -34,6 +34,23 @@ const sr = ScrollReveal({
     duration: 2000,
     reset: true
 })
+
+//*=======PRINT-TEXT======*//
+
+let titleColor = document.querySelector('.home__title-color');
+let text = 'Abramov Sergey';
+let x=1;
+textPrint();
+
+function textPrint(){
+titleColor.innerText = text.slice(0,x);
+x++;
+if(x>text.length){
+    x=1;
+}
+setTimeout(textPrint, 300);
+}
+
 /*=======SCROLL HOME=======*/
 
 sr.reveal('.home__title',{})
